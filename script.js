@@ -104,3 +104,27 @@ taskInput.addEventListener("keyup", e => {
         showTodo(document.querySelector("span.active").id);
     }
 });
+const spam = document.querySelector(".filters")
+
+const imput = document.querySelector(".imput");
+
+const tema = document.querySelector(".wrapper");
+
+const Titulo = 
+document.querySelector(".titulo");
+
+const botaoapagar = document.querySelector(".clear-btn")
+
+function temaP() { 
+tema.style.transition = "1s"
+tema.style.background = "#d5f4ff"; Titulo.style.color = "#2D5CFE"; botaoapagar.style.background = "linear-gradient(45deg, #1798fb, #2D5CFE)";
+botaoapagar.style.color = "#fff";
+botaoapagar.style.border = "none";
+ }
+
+function temaS() { 
+tema.style.transition = "1s"
+tema.style.background = "#fff"; Titulo.style.color = "#2d2d2d";
+botaoapagar.style.background = "none";
+botaoapagar.style.color = "#000";
+botaoapagar.style.border = "1px solid black"; }
