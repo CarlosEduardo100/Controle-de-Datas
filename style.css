@@ -8,13 +8,47 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   width: 100%;
   height: 100vh;
   display:grid;
   overflow: hidden;
-  background: #fff;
 }
+
+.botoes{
+				display: flex;
+				gap:40px;
+				justify-content: center;
+}
+
+.btn1{
+		   border:1px solid #497eb0;
+		   border-radius:50%;
+		   width: 40px;
+		   height:40px;
+		   background: #aadfff;
+		   color: #aadfff;
+}
+
+.btn3{
+      border:1px solid #7a7a7a;
+      border-radius:50%;
+				width: 40px;
+				height: 40px;
+				background: #f7f7f7;
+				color: #f7f7f7;
+}
+
+.btn4{
+      border:1px solid #000;
+      border-radius:50%;
+				width: 40px;
+				height: 40px;
+				background: #222222;
+				color: #222;
+}
+
 ::selection{
   color: #fff;
   background: #3C87FF;
@@ -24,7 +58,6 @@ body{
   width: 100%;
   padding: 28px 0 30px;
   align-self: center;
-  background: #fff;
   border-radius: 7px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
@@ -40,7 +73,7 @@ body{
   width: 30px; 
   transform: translate(11px, -50%);
 }
-.task-input input{
+.imput{
   height: 100%;
   width: 100%;
   outline: none;
@@ -49,12 +82,12 @@ body{
   padding: 0 20px 0 53px;
   border: 1px solid #999;
 }
-.task-input input:focus,
-.task-input input.active{
+.imput:focus,
+.imput.active{
   padding-left: 52px;
-  border: 2px solid #3C87FF;
+  border: 2px solid #2D5CFE;
 }
-.task-input input::placeholder{
+.imput::placeholder{
   color: #bfbfbf;
 }
 .controls, li{
@@ -68,26 +101,27 @@ body{
 }
 
 .controls span{
-				display: block;
+				display: flex;
 }
 
 .filters span{
+  display: flex;  
   margin: 10px 8px;
   font-size: 17px;
-  color: #444444;
-  cursor: pointer;
-}
+  color: #000;
+  cursor: pointer;}
+
 .filters span:first-child{
-  margin-left: 0;
+  margin-left: 8px;
 }
 .filters span.active{
-  color: #3C87FF;
+  color:#2D5CFE;
 }
 .controls .clear-btn{
-  border: none;
-  opacity: 0.6;
+  border: 1px solid black;
+  opacity: .6;
   outline: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   font-size: 13px;
   padding: 7px 13px;
@@ -95,7 +129,6 @@ body{
   letter-spacing: 0.3px;
   pointer-events: none;
   transition: transform 0.25s ease;
-  background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
 }
 .clear-btn.active{
   opacity: 0.9;
@@ -187,7 +220,7 @@ body{
   height: 25px;
   font-size: 16px;
   margin-bottom: 2px;
-  padding: 17px 15px;
+  padding: 17px 16px;
   cursor: pointer;
   justify-content: flex-start;
 }
@@ -208,51 +241,27 @@ display:grid;
 
 h1{
 text-align: center;
-color: #3d3d3d;
+color: #2d2d2d;
 font-family: 'Josefin Sans', sans-serif;
 }
 
-.gradi h1::before{
-				content:"";
-				display: inline-block;
-				width:8px;
-				height:8px;
-				position: absolute;
-				top:60px;
-				left:25px;
-				border: 2px solid #1562ff;
-				border-radius:50%;
+#j h1{
+				color:#3F51B5;
 }
 
-.gradi h1::after{
-				content:"";
-				display: inline-block;
-				width:8px;
-				height:8px;
-				position: absolute;
-				top:60px;
-				left:375px;
-				border: 2px solid #1562ff;
-				border-radius:50%;
-}
-
-
-.inicio{
-      animation: inicio 1.5s linear forwards .5s;
+#j{
+      animation: inicio 1.4s linear forwards .5s;
 				position: absolute;
 				top:30%;
 }
 
 @keyframes inicio {
-				90%{opacity: 1;}
+      0%{color:red;}
+				90%{opacity:1;}
 				100%{opacity:0;}
 }
 
-.inicio h1{
-				
-}
-
-.inicio img{
+#j img{
 			width: 80%;
 }
 
@@ -275,7 +284,7 @@ font-family: 'Josefin Sans', sans-serif;
   .task-box{
     margin-top: 20px;
     margin-right: 5px;
-    padding: 0 15px 10px 20px;
+    padding: 0 25px 10px 20px;
   }
   .task label input{
     margin-top: 4px;
